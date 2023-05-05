@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="to_do_list.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Russo+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <main>
+        <div class="main">
+            <div class="main1">
+                <div class="menu">
+                    <h1>Menu</h1>
+                    
+                </div>
+                <div class="menu_box">
+                    <input class="search" type="search" placeholder="Search" id="">
+                    <h4>To do list</h4>
+                    <div class="int0">
+                        <i class="fa fa-list" aria-hidden="true"></i>
+                        <button class="btn0">Task</button>
+                        <button id="today-btn1">0</button>
+                    </div>
+                    <div class="int2">
+                        <i class="fa fa-sticky-note" aria-hidden="true"></i>
+                        <button class="btn2">Sticky Wall</button>
+                        <button id="sticky-btn3">0</button>
+                    </div>
+                    <div class="int1">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <button class="btn1">Checklist</button>
+                    </div>
+                    <div class="month">      
+                        <h1>May</h1><p>2023</p>
+                    </div>
+                      <ul class="weekdays">
+                        <li>Su</li>
+                        <li>M</li>
+                        <li>T</li>
+                        <li>W</li>
+                        <li>Th</li>
+                        <li>F</li>
+                        <li>Sa</li>
+
+                      </ul>
+                      
+                      <ul class="days">  
+                        <li class="last1">30</li>
+                        <li>1</li>
+                        <li>2</li>
+                        <li><span class="active">3</span></li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                        <li>14</li>
+                        <li>15</li>
+                        <li>16</li>
+                        <li>17</li>
+                        <li>18</li>
+                        <li>19</li>
+                        <li>20</li>
+                        <li>21</li>
+                        <li>22</li>
+                        <li>23</li>
+                        <li>24</li>
+                        <li>25</li>
+                        <li>26</li>
+                        <li>27</li>
+                        <li>28</li>
+                        <li>29</li>
+                        <li>30</li>
+                        <li>31</li>
+                        <li class="next1">1</li>
+                        <li class="next2">2</li>
+                        <li class="next3">3</li>
+                      </ul>
+                </div>
+            </div>
+            <div class="main2">
+                <div class="main2_title">
+                    <h1 class="today">Task</h1>
+                    <button id="today_btn">0</button>
+                </div>
+                <div class="main222">
+                    <div class="main22">
+                        <button id="add" onclick="press()"><i class="fa fa-plus" aria-hidden="true"></i>Add New Task</button>
+                        <div class="int3">
+                            <div class="int33">
+                                <button id="btn3"></button>
+                                <p>></p>
+                            </div>
+                        </div>
+                        <div class="int4">
+                            <div class="int44">
+                                <button id="btn4"></button>
+                                <p>></p>
+                            </div>
+                        </div>
+                        <div class="int5">
+                            <div class="int55">
+                                <button id="btn5"></button>
+                                <p>></p>
+                            </div>
+                        </div>
+                        <div class="int6">
+                            <div class="int66">
+                                <button id="btn6"></button>
+                                <p>></p>
+                            </div>
+                        </div>
+                        <div class="int7">
+                            <div class="int77">
+                                <button id="btn7"></button>
+                                <p>></p>
+                            </div>
+                        </div>
+                        <div class="int8">
+                            <div class="int88">
+                                <button id="btn8"></button>
+                                <p>></p>
+                            </div>
+                        </div>
+                        <div class="int9">
+                            <div class="int99">
+                                <button id="btn9"></button>
+                                <p>></p>
+                            </div>
+                        </div>
+                        <div class="int10">
+                            <div class="int1010">
+                                <button id="btn10"></button>
+                                <p>></p>
+                            </div>
+                        </div>
+                        <div class="int11">
+                            <div class="int1111">
+                                <button id="btn11"></button>
+                                <p>></p>
+                            </div>
+                        </div>
+                        <div class="int12">
+                            <div class="int1212">
+                                <button id="btn12"></button>
+                                <p>></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main22_22">
+                        <div class="main_2222">
+                            <div class="main_22222">
+                                <h3>Task:</h3>
+                                <input id="m22222_int1" type="text" placeholder="Title Here" onkeyup="update2()">
+                                <textarea id="m22222_int2" type="text" placeholder="Description"></textarea>
+                            </div>
+                            <div class="main_222222">
+                                <div class="m2list">
+                                    <p>List</p>
+                                    <select name="" id="" aria-placeholder="">Ls
+                                        <option value="Personal">Personal</option>
+                                        <option value="Work">Work</option>
+                                    </select>
+                                </div>
+                                <div class="m2date">
+                                    <p>Due date</p><input type="date" name="" id="">
+                                    
+                                </div>
+                                <div class="m22delete">
+                                    <button class="m2delete">Delete</button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="main_3333">
+                            <div class="main_33333">
+                                <h3>Task:</h3>
+                                <input id="m33333_int1" type="text" placeholder="Title Here" onkeyup="update3()">
+                                <textarea id="m33333_int2" type="text" placeholder="Description"></textarea>
+                            </div>
+                            <div class="main_333333">
+                                <div class="m3list">
+                                    <p>List</p>
+                                    <select name="" id="" aria-placeholder="">Ls
+                                        <option value="Personal">Personal</option>
+                                        <option value="Work">Work</option>
+                                    </select>
+                                </div>
+                                <div class="m3date">
+                                    <p>Due date</p><input type="date" name="" id="">
+                                </div>
+                                <div class="m33delete">
+                                    <button class="m3delete">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main_4444">
+                            <div class="main_44444">
+                                <h3>Task:</h3>
+                                <input id="m44444_int1" type="text" placeholder="Title Here" onkeyup="update4()">
+                                <textarea id="m44444_int2" type="text" placeholder="Description"></textarea>
+                            </div>
+                            <div class="main_444444">
+                                <div class="m4list">
+                                    <p>List</p>
+                                    <select name="" id="" aria-placeholder="">Ls
+                                        <option value="Personal">Personal</option>
+                                        <option value="Work">Work</option>
+                                    </select>
+                                </div>
+                                <div class="m4date">
+                                    <p>Due date</p><input type="date" name="" id="">
+                                </div>
+                                <div class="m44delete">
+                                    <button class="m4delete">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main_5555">
+                            <div class="main_55555">
+                                <h3>Task:</h3>
+                                <input id="m55555_int1" type="text" placeholder="Title Here" onkeyup="update5()">
+                                <textarea id="m55555_int2" type="text" placeholder="Description"></textarea>
+                            </div>
+                            <div class="main_555555">
+                                <div class="m5list">
+                                    <p>List</p>
+                                    <select name="" id="" aria-placeholder="">Ls
+                                        <option value="Personal">Personal</option>
+                                        <option value="Work">Work</option>
+                                    </select>
+                                </div>
+                                <div class="m5date">
+                                    <p>Due date</p><input type="date" name="" id="">
+                                </div>
+                                <div class="m55delete">
+                                    <button class="m5delete">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main_6666">
+                            <div class="main_66666">
+                                <h3>Task:</h3>
+                                <input id="m66666_int1" type="text" placeholder="Title Here" onkeyup="update6()">
+                                <textarea id="m66666_int2" type="text" placeholder="Description"></textarea>
+                            </div>
+                            <div class="main_666666">
+                                <div class="m6list">
+                                    <p>List</p>
+                                    <select name="" id="" aria-placeholder="">Ls
+                                        <option value="Personal">Personal</option>
+                                        <option value="Work">Work</option>
+                                    </select>
+                                </div>
+                                <div class="m6date">
+                                    <p>Due date</p><input type="date" name="" id="">
+                                </div>
+                                <div class="m66delete">
+                                    <button class="m6delete">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main_7777">
+                            <div class="main_77777">
+                                <h3>Task:</h3>
+                                <input id="m77777_int1" type="text" placeholder="Title Here" onkeyup="update7()">
+                                <textarea id="m77777_int2" type="text" placeholder="Description"></textarea>
+                            </div>
+                            <div class="main_777777">
+                                <div class="m7list">
+                                    <p>List</p>
+                                    <select name="" id="" aria-placeholder="">Ls
+                                        <option value="Personal">Personal</option>
+                                        <option value="Work">Work</option>
+                                    </select>
+                                </div>
+                                <div class="m7date">
+                                    <p>Due date</p><input type="date" name="" id="">
+                                </div>
+                                <div class="m77delete">
+                                    <button class="m7delete">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main_8888">
+                            <div class="main_88888">
+                                <h3>Task:</h3>
+                                <input id="m88888_int1" type="text" placeholder="Title Here" onkeyup="update8()">
+                                <textarea id="m88888_int2" type="text" placeholder="Description"></textarea>
+                            </div>
+                            <div class="main_888888">
+                                <div class="m8list">
+                                    <p>List</p>
+                                    <select name="" id="" aria-placeholder="">Ls
+                                        <option value="Personal">Personal</option>
+                                        <option value="Work">Work</option>
+                                    </select>
+                                </div>
+                                <div class="m8date">
+                                    <p>Due date</p><input type="date" name="" id="">
+                                </div>
+                                <div class="m88delete">
+                                    <button class="m8delete">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main_9999">
+                            <div class="main_99999">
+                                <h3>Task:</h3>
+                                <input id="m99999_int1" type="text" placeholder="Title Here" onkeyup="update9()">
+                                <textarea id="m99999_int2" type="text" placeholder="Description"></textarea>
+                            </div>
+                            <div class="main_999999">
+                                <div class="m9list">
+                                    <p>List</p>
+                                    <select name="" id="" aria-placeholder="">Ls
+                                        <option value="Personal">Personal</option>
+                                        <option value="Work">Work</option>
+                                    </select>
+                                </div>
+                                <div class="m9date">
+                                    <p>Due date</p><input type="date" name="" id="">
+                                </div>
+                                <div class="m99delete">
+                                    <button class="m9delete">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main_10101010">
+                            <div class="main_1010101010">
+                                <h3>Task:</h3>
+                                <input id="m1010101010_int1" type="text" placeholder="Title Here" onkeyup="update10()">
+                                <textarea id="m1010101010_int2" type="text" placeholder="Description"></textarea>
+                            </div>
+                            <div class="main_101010101010">
+                                <div class="m10list">
+                                    <p>List</p>
+                                    <select name="" id="" aria-placeholder="">Ls
+                                        <option value="Personal">Personal</option>
+                                        <option value="Work">Work</option>
+                                    </select>
+                                </div>
+                                <div class="m10date">
+                                    <p>Due date</p><input type="date" name="" id="">
+                                </div>
+                                <div class="m1010delete">
+                                    <button class="m10delete">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main_11111111">
+                            <div class="main_1111111111">
+                                <h3>Task:</h3>
+                                <input id="m1111111111_int1" type="text" placeholder="Title Here" onkeyup="update11()">
+                                <textarea id="m1111111111_int2" type="text" placeholder="Description"></textarea>
+                            </div>
+                            <div class="main_111111111111">
+                                <div class="m11list">
+                                    <p>List</p>
+                                    <select name="" id="" aria-placeholder="">Ls
+                                        <option value="Personal">Personal</option>
+                                        <option value="Work">Work</option>
+                                    </select>
+                                </div>
+                                <div class="m11date">
+                                    <p>Due date</p><input type="date" name="" id="">
+                                </div>
+                                <div class="m1111delete">
+                                    <button class="m11delete">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <div class="main3">
+                <div class="main3_title">
+                    <h1>Sticky Wall</h1>
+                    <button id="stick_btn">0</button>
+                </div>
+                <div class="main33">
+                    <div class="int133">
+                        <div class="int13">
+                            <textarea name="" id="" cols="30" rows="10" class="stick1"></textarea>
+                            <button id="del13"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                    <div class="int144">
+                        <div class="int14">
+                            <textarea name="" id="" cols="30" rows="10" class="stick2"></textarea>
+                            <button id="del14"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                    <div class="int155">
+                        <div class="int15">
+                            <textarea name="" id="" cols="30" rows="10" class="stick3"></textarea>
+                            <button id="del15"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                    <div class="int166">
+                        <div class="int16">
+                            <textarea name="" id="" cols="30" rows="10" class="stick4"></textarea>
+                            <button id="del16"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                    <div class="int177">
+                        <div class="int17">
+                            <textarea name="" id="" cols="30" rows="10" class="stick5"></textarea>
+                            <button id="del17"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                    <div class="int18">
+                        <button id="sticky_btn"><i  class="fa fa-plus"  style="font-size: 40px; font-weight: lighter;" ></i></button>
+                    </div>
+                        
+                 </div>
+            </div>
+            <div class="main_4">
+                <div class="main4-title">
+                    <h1>Checklist</h1>
+                </div>
+                <div class="main4">
+                    <div class="main44">
+                        <div class="int19_9">
+                            <h3>DAILY TASK</h3>
+                            <div class="int1_99">
+                                <p class="main4title1">Done</p>
+                                <p class="main4title2">To do</p>
+                                <p class="main4title3">Time</p>
+                            </div>
+                        </div>
+                        <div class="int199">
+                            <div class="int19">
+                                <input type="checkbox" name="" id="check">
+                                <input class="btn19" type="text" name="" id="" >
+                                <input class="tim19" type="time" name="" id="">
+                            </div>
+                        </div>
+                        <div class="int200">
+                            <div class="int20">
+                                <input type="checkbox" name="" id="check">
+                                <input class="btn19" type="text" name="" id="" >
+                                <input class="tim19" type="time" name="" id="">
+                            </div>
+                        </div>
+                        <div class="int201">
+                            <div class="int21">
+                                <input type="checkbox" name="" id="check">
+                                <input class="btn19" type="text" name="" id="" >
+                                <input class="tim19" type="time" name="" id="">
+                            </div>
+                        </div>
+                        <div class="int202">
+                            <div class="int22">
+                                <input type="checkbox" name="" id="check">
+                                <input class="btn19" type="text" name="" id="" >
+                                <input class="tim19" type="time" name="" id="">
+                            </div>
+                        </div>
+                        <div class="int203">
+                            <div class="int23">
+                                <input type="checkbox" name="" id="check">
+                                <input class="btn19" type="text" name="" id="" >
+                                <input class="tim19" type="time" name="" id="">
+                            </div>
+                        </div>
+                        <div class="int204">
+                            <div class="int24">
+                                <input type="checkbox" name="" id="check">
+                                <input class="btn19" type="text" name="" id="" >
+                                <input class="tim19" type="time" name="" id="">
+                            </div>
+                        </div>
+                        <div class="int205">
+                            <div class="int25">
+                                <input type="checkbox" name="" id="check">
+                                <input class="btn19" type="text" name="" id="" >
+                                <input class="tim19" type="time" name="" id="">
+                            </div>
+                        </div>
+                        <div class="int206">
+                            <div class="int26">
+                                <input type="checkbox" name="" id="check">
+                                <input class="btn19" type="text" name="" id="" >
+                                <input class="tim19" type="time" name="" id="">
+                            </div>
+                        </div>
+                        <div class="int207">
+                            <div class="int27">
+                                <input type="checkbox" name="" id="check">
+                                <input class="btn19" type="text" name="" id="" >
+                                <input class="tim19" type="time" name="" id="">
+                            </div>
+                        </div>
+                        <div class="int208">
+                            <div class="int28">
+                                <input type="checkbox" name="" id="check">
+                                <input class="btn19" type="text" name="" id="" >
+                                <input class="tim19" type="time" name="" id="">
+                            </div>
+                        </div>
+                        <div class="int209">
+                            <div class="int29">
+                                <input type="checkbox" name="" id="check">
+                                <input class="btn19" type="text" name="" id="" >
+                                <input class="tim19" type="time" name="" id="">
+                            </div>
+                        </div>
+                        <div class="int210">
+                            <div class="int30">
+                                <input type="checkbox" name="" id="check">
+                                <input class="btn19" type="text" name="" id="" >
+                                <input class="tim19" type="time" name="" id="">
+                            </div>
+                        </div>
+                        <div class="int211">
+                            <div class="int31">
+                                <button id="int31add">Add a list</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main5">
+                       <div class="main55">
+                            <div class="main55_title">
+                                <h3 class="title_main55">SCHOOL TASK</h3>
+                            </div>
+                            <div class="main55_ints">
+                                <input type="checkbox" name="" id="btns1"><input type="text" class="ints1">
+                                <input type="checkbox" name="" id="btns1"><input type="text"class="ints1">
+                                <input type="checkbox" name="" id="btns1"><input type="text"class="ints1">
+                                <input type="checkbox" name="" id="btns1"><input type="text"class="ints1">
+                                <input type="checkbox" name="" id="btns1"><input type="text"class="ints1">
+                                <input type="checkbox" name="" id="btns1"><input type="text"class="ints1">
+                            </div>
+                       </div>
+                       <div class="main555">
+                            <div class="main55_title">
+                                <h3 class="title_main55">DAILY EXCERCISE</h3>
+                            </div>
+                            <div class="main55_ints">
+                                <input type="checkbox" name="" id="btns1"><input type="text" class="ints1">
+                                <input type="checkbox" name="" id="btns1"><input type="text"class="ints1">
+                                <input type="checkbox" name="" id="btns1"><input type="text"class="ints1">
+                                <input type="checkbox" name="" id="btns1"><input type="text"class="ints1">
+                                <input type="checkbox" name="" id="btns1"><input type="text"class="ints1">
+                                <input type="checkbox" name="" id="btns1"><input type="text"class="ints1">
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+
+    <script src="jquery/jquery.js" type="text/javascript"></script>
+    <script src="to_do_list.js" type="text/javascript"></script>
+</body>
+</html>
